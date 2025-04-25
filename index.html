@@ -1,7 +1,8 @@
-<html lang="es">
+html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FarincalTec - Soluciones informáticas a domicilio en Barcelona. Mantenimiento de ordenadores, instalación de redes, actualización de negocios en Google. Atención rápida y personalizada.">
   <title>FarincalTec - Servicios Informáticos a Domicilio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
@@ -27,6 +28,7 @@
     header p {
       margin-top: 10px;
       font-size: 1.2em;
+      font-weight: 300;
     }
     nav {
       margin-top: 20px;
@@ -49,6 +51,7 @@
     h2 {
       color: #007bff;
       margin-bottom: 20px;
+      font-size: 1.8em;
     }
     ul {
       padding-left: 20px;
@@ -74,10 +77,26 @@
       margin: 10px;
       font-weight: bold;
       display: inline-block;
-      transition: background-color 0.3s;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
     }
     .buttons a:hover {
       background-color: #0056b3;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .testimonials {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #ddd;
+    }
+    .testimonial {
+      margin-bottom: 20px;
+      font-style: italic;
+      color: #555;
     }
     footer {
       text-align: center;
@@ -93,7 +112,7 @@
 
 <header>
   <h1>FarincalTec</h1>
-  <p>Tecnología fácil, cerca de usted</p>
+  <p>Soluciones Informáticas a Domicilio en Barcelona — Atención Personalizada y de Confianza</p>
   <nav>
     <a href="index.html">Inicio</a> |
     <a href="sobre.html">Sobre Nosotros</a> |
@@ -105,7 +124,7 @@
   <h2>¿Qué servicios ofrecemos?</h2>
   <ul>
     <li>Mantenimiento y limpieza de ordenadores y móviles</li>
-    <li>Instalación de impresoras y configuración de WiFi</li>
+    <li>Instalación de impresoras y configuración de redes WiFi</li>
     <li>Protección contra virus y seguridad digital</li>
     <li>Recuperación de archivos importantes</li>
     <li>Optimización de sistemas lentos</li>
@@ -114,8 +133,21 @@
   </ul>
 
   <div class="buttons">
-    <a href="https://wa.me/34678218084" target="_blank">¡Contáctanos por WhatsApp!</a>
-    <a href="mailto:seuemail@exemplo.com" target="_blank">Enviar Correo</a>
+    <a href="https://wa.me/34678218084?text=Hola!%20Estoy%20interesado%20en%20sus%20servicios%20de%20informática." target="_blank">¡Contáctanos por WhatsApp!</a>
+    <a href="mailto:farincaltec@gmail.com" target="_blank">Enviar Correo</a>
+  </div>
+
+  <div class="testimonials">
+    <h2>Confían en nosotros:</h2>
+    <div class="testimonial">
+      "Excelente servicio, rápido y muy amable. ¡100% recomendado!" — María G.
+    </div>
+    <div class="testimonial">
+      "Me solucionaron el problema de mi computadora en el mismo día. ¡Muy profesionales!" — Juan P.
+    </div>
+    <div class="testimonial">
+      "Instalaron mi red WiFi en casa y ahora todo funciona perfecto. ¡Gracias FarincalTec!" — Ana R.
+    </div>
   </div>
 </main>
 
