@@ -2,6 +2,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conoce más sobre FarincalTec, tu servicio informático de confianza en Barcelona. Atención personalizada para personas y pequeños negocios.">
   <title>Sobre Nosotros - FarincalTec</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
@@ -45,6 +46,7 @@
     h2 {
       color: #007bff;
       margin-bottom: 20px;
+      font-size: 1.8em;
     }
     p {
       font-size: 1.1em;
@@ -63,10 +65,16 @@
       border-radius: 8px;
       font-weight: bold;
       display: inline-block;
-      transition: background-color 0.3s;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
     }
     .buttons a:hover {
       background-color: #0056b3;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
     footer {
       text-align: center;
@@ -84,23 +92,23 @@
   <h1>Sobre Nosotros</h1>
   <nav>
     <a href="index.html">Inicio</a> |
-    <a href="sobre.html">Sobre Nosotros</a>
+    <a href="sobre.html">Sobre Nosotros</a> |
+    <a href="google.html">Google para Negocios</a>
   </nav>
 </header>
 
 <main>
   <h2>¿Quiénes somos en FarincalTec?</h2>
   <p>
-    En <strong>FarincalTec</strong> ayudamos a las personas y a los pequeños negocios a tener la tecnología como aliada, no como problema.
-    Ofrecemos soluciones informáticas en Barcelona, siempre con un trato humano, cercano y profesional.
+    En <strong>FarincalTec</strong> ayudamos a las personas y pequeños negocios a dominar la tecnología de manera fácil y segura.
+    Ofrecemos soporte informático a domicilio en Barcelona, con atención cercana, clara y profesional.
   </p>
   <p>
-    Creemos que la tecnología debe ser sencilla y accesible para todos. Por eso trabajamos con paciencia,
-    explicando cada paso y buscando siempre la mejor solución para cada cliente.
+    Nuestra misión es simplificar el mundo digital para quienes más lo necesitan: ya sea recuperando sus datos,
+    optimizando sus dispositivos o mejorando su presencia online.
   </p>
   <p>
-    Nuestra misión es acercar la tecnología a quienes más lo necesitan, sin complicaciones ni costos ocultos.
-    ¡Queremos ser su apoyo de confianza en el mundo digital!
+    Somos su aliado tecnológico de confianza, comprometidos con el servicio honesto y la satisfacción del cliente.
   </p>
 
   <div class="buttons">
