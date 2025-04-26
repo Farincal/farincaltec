@@ -2,7 +2,7 @@ html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FarincalTec - Tecnología segura y soporte técnico personalizado en Barcelona. Aprende a usar criptomonedas, optimiza tu tecnología y protege tu mundo digital.">
+  <meta name="description" content="FarincalTec - Tecnología segura y soporte técnico en Barcelona. Aprende sobre criptomonedas, optimiza tu negocio y protege tu mundo digital.">
   <title>FarincalTec - Tecnología y Soporte Técnico</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -33,7 +33,7 @@ html lang="es">
     .ticker-content {
       display: inline-block;
       padding-left: 100%;
-      animation: ticker 20s linear infinite;
+      animation: ticker 30s linear infinite;
     }
     @keyframes ticker {
       0% { transform: translateX(0); }
@@ -103,7 +103,7 @@ html lang="es">
 
 <div class="ticker">
   <div class="ticker-content" id="ticker-content">
-    Cargando precios...
+    Cargando precios y noticias...
   </div>
 </div>
 
@@ -163,9 +163,9 @@ html lang="es">
 </footer>
 
 <script>
-async function fetchPrices() {
+async function fetchPricesAndNews() {
   try {
-    const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,dogecoin&vs_currencies=usd,eur,brl');
+    const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,dogecoin&vs_currencies=usd,eur');
     const data = await response.json();
 
     const btc = data.bitcoin.usd;
@@ -173,24 +173,28 @@ async function fetchPrices() {
     const sol = data.solana.usd;
     const doge = data.dogecoin.usd;
 
-    // Valores fictícios dos índices, pois a CoinGecko só puxa criptos (exemplo abaixo)
-    const dollarToBrl = "R$ 5,10";  
-    const euroToUsd = "US$ 1,08";   
-    const ibovespa = "127.000 pts"; 
-    const sp500 = "4.950 pts";      
+    const noticias = [
+      "Bitcoin supera los 70.000 USD en nuevos récords.",
+      "Ethereum se acerca a una actualización histórica.",
+      "Solana sigue creciendo en adopción de NFTs.",
+      "Dogecoin vuelve a ser tendencia en las redes.",
+      "España lidera adopción de criptomonedas en Europa.",
+      "FarincalTec ahora ofrece asesoría en blockchain."
+    ];
 
-    document.getElementById('ticker-content').innerHTML = `
-      BTC: $${btc} | ETH: $${eth} | SOL: $${sol} | DOGE: $${doge} | 
-      Dólar: ${dollarToBrl} | Euro: ${euroToUsd} | Ibovespa: ${ibovespa} | S&P500: ${sp500}
+    const precios = `
+      BTC: $${btc} | ETH: $${eth} | SOL: $${sol} | DOGE: $${doge}
     `;
+
+    document.getElementById('ticker-content').innerHTML = precios + " | " + noticias.join(" | ");
   } catch (error) {
-    console.error('Erro ao carregar preços:', error);
-    document.getElementById('ticker-content').innerText = 'Erro ao carregar preços.';
+    console.error('Erro al cargar precios:', error);
+    document.getElementById('ticker-content').innerText = 'Error al cargar precios y noticias.';
   }
 }
 
-fetchPrices();
-setInterval(fetchPrices, 60000); // Atualiza a cada 60 segundos
+fetchPricesAndNews();
+setInterval(fetchPricesAndNews, 60000);
 </script>
 
 </body>
