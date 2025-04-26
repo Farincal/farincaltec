@@ -106,8 +106,7 @@ head>
   </div>
 </div>
 
-
-main>
+<main>
 
   <section>
     <h2>Servicios que ofrecemos</h2>
@@ -183,10 +182,10 @@ async function fetchPricesAndNews() {
     const farincalNotice = "FarincalTec ofrece formación y actualización digital en Barcelona.";
     const news = [
       "Bitcoin supera los 70.000 USD.",
-      "Ethereum se prepara para su gran actualización.",
+      "Ethereum prepara nueva actualización.",
       "Solana lidera el mercado NFT en Europa.",
-      "XRP establece nuevas alianzas estratégicas.",
-      "Cardano impulsa proyectos blockchain en África."
+      "XRP establece alianzas estratégicas.",
+      "Cardano impulsa proyectos blockchain."
     ];
 
     const combinedTicker = prices.join(' | ') + ' | ' + farincalNotice + ' | ' + news.join(' | ');
@@ -198,7 +197,7 @@ async function fetchPricesAndNews() {
 }
 
 fetchPricesAndNews();
-setInterval(fetchPricesAndNews, 60000); // Atualiza a cada 60 segundos
+setInterval(fetchPricesAndNews, 60000);
 </script>
 
 </body>
