@@ -1,8 +1,8 @@
-<head>
+head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="FarincalTec - Tecnología segura y soporte técnico en Barcelona. Aprende sobre criptomonedas, optimiza tu negocio y protege tu mundo digital.">
-  <title>FarincalTec - Tecnología y Soporte Técnico</title>
+  <title>FarincalTec - Tecnología y Criptomonedas</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
@@ -32,7 +32,7 @@
     .ticker-content {
       display: inline-block;
       padding-left: 100%;
-      animation: ticker 30s linear infinite;
+      animation: ticker 40s linear infinite;
     }
     @keyframes ticker {
       0% { transform: translateX(0); }
@@ -106,7 +106,8 @@
   </div>
 </div>
 
-<main>
+
+main>
 
   <section>
     <h2>Servicios que ofrecemos</h2>
@@ -164,36 +165,40 @@
 <script>
 async function fetchPricesAndNews() {
   try {
-    const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,dogecoin&vs_currencies=usd,eur');
+    const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana,dogecoin,xrp,cardano,binancecoin,litecoin,polygon&vs_currencies=usd,eur');
     const data = await response.json();
 
-    const btc = data.bitcoin.usd;
-    const eth = data.ethereum.usd;
-    const sol = data.solana.usd;
-    const doge = data.dogecoin.usd;
-
-    const noticias = [
-      "Bitcoin supera los 70.000 USD en nuevos récords.",
-      "Ethereum se acerca a una actualización histórica.",
-      "Solana sigue creciendo en adopción de NFTs.",
-      "Dogecoin vuelve a ser tendencia en las redes.",
-      "España lidera adopción de criptomonedas en Europa.",
-      "FarincalTec ahora ofrece asesoría en blockchain."
+    const prices = [
+      `BTC: $${data.bitcoin.usd}`,
+      `ETH: $${data.ethereum.usd}`,
+      `SOL: $${data.solana.usd}`,
+      `DOGE: $${data.dogecoin.usd}`,
+      `XRP: $${data.xrp.usd}`,
+      `ADA: $${data.cardano.usd}`,
+      `BNB: $${data.binancecoin.usd}`,
+      `LTC: $${data.litecoin.usd}`,
+      `MATIC: $${data.polygon.usd}`
     ];
 
-    const precios = `
-      BTC: $${btc} | ETH: $${eth} | SOL: $${sol} | DOGE: $${doge}
-    `;
+    const farincalNotice = "FarincalTec ofrece formación y actualización digital en Barcelona.";
+    const news = [
+      "Bitcoin supera los 70.000 USD.",
+      "Ethereum se prepara para su gran actualización.",
+      "Solana lidera el mercado NFT en Europa.",
+      "XRP establece nuevas alianzas estratégicas.",
+      "Cardano impulsa proyectos blockchain en África."
+    ];
 
-    document.getElementById('ticker-content').innerHTML = precios + " | " + noticias.join(" | ");
+    const combinedTicker = prices.join(' | ') + ' | ' + farincalNotice + ' | ' + news.join(' | ');
+    document.getElementById('ticker-content').innerHTML = combinedTicker;
   } catch (error) {
-    console.error('Erro al cargar precios:', error);
-    document.getElementById('ticker-content').innerText = 'Error al cargar precios y noticias.';
+    console.error('Error al cargar precios y noticias:', error);
+    document.getElementById('ticker-content').innerText = 'Error al cargar datos.';
   }
 }
 
 fetchPricesAndNews();
-setInterval(fetchPricesAndNews, 60000);
+setInterval(fetchPricesAndNews, 60000); // Atualiza a cada 60 segundos
 </script>
 
 </body>
