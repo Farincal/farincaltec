@@ -2,64 +2,116 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sobre Nosotros | FarincalTec Barcelona</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--bg:#080c14;--surface:#0d1421;--surface2:#111827;--border:rgba(255,255,255,0.07);--cyan:#00d4ff;--cyan-dim:rgba(0,212,255,0.1);--cyan-glow:rgba(0,212,255,0.3);--text:#e2e8f0;--muted:#64748b;--white:#ffffff}
-    html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;background:rgba(8,12,20,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-    .logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
-    .logo img{width:36px;height:36px;border-radius:8px;object-fit:cover}
-    .logo-text{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--white)}
-    .logo-text span{color:var(--cyan)}
-    .nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
-    .nav-links a{color:var(--muted);text-decoration:none;font-size:.875rem;font-weight:500;transition:color .2s}
-    .nav-links a:hover,.nav-links a.active{color:var(--cyan)}
-    .nav-cta{background:var(--cyan)!important;color:#000!important;padding:.5rem 1.2rem;border-radius:6px;font-weight:700!important}
-    @media(max-width:768px){.nav-links{display:none}nav{padding:1rem 1.5rem}}
-    .page-hero{padding:9rem 2rem 5rem;max-width:1100px;margin:0 auto}
-    .section-label{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--cyan);margin-bottom:.8rem}
-    .section-label::before{content:'';width:18px;height:1px;background:var(--cyan)}
-    h1{font-family:'Syne',sans-serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:800;line-height:1.05;letter-spacing:-.03em;color:var(--white);margin-bottom:1rem}
-    h1 em{font-style:normal;color:var(--cyan)}
-    .hero-sub{color:var(--muted);font-size:1rem;max-width:520px;line-height:1.75}
-    section{padding:5rem 2rem;max-width:1100px;margin:0 auto}
-    h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-.03em;color:var(--white);margin-bottom:.7rem}
-    .about-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:3rem;display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center}
-    @media(max-width:680px){.about-card{grid-template-columns:1fr;text-align:center}}
-    .about-logo-wrap{text-align:center}
-    .about-logo-img{width:130px;height:130px;border-radius:50%;box-shadow:0 0 50px var(--cyan-glow);display:block;margin:0 auto}
-    .brand-name{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--white);margin-top:1rem}
-    .brand-name span{color:var(--cyan)}
-    .brand-tag{display:inline-block;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;background:var(--cyan-dim);color:var(--cyan);padding:.3rem .8rem;border-radius:100px;margin-top:.5rem}
-    .about-text p{color:var(--muted);font-size:.95rem;line-height:1.8;margin-bottom:1rem}
-    .about-text p:last-child{margin-bottom:0}
-    .values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem}
-    .value-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.8rem;transition:border-color .3s,transform .3s}
-    .value-card:hover{border-color:rgba(0,212,255,.3);transform:translateY(-4px)}
-    .value-icon{font-size:1.6rem;margin-bottom:1rem}
-    .value-card h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:.4rem}
-    .value-card p{color:var(--muted);font-size:.85rem;line-height:1.65}
-    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-    @media(max-width:680px){.contact-grid{grid-template-columns:1fr}}
-    .contact-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem;display:flex;align-items:center;gap:1.5rem;text-decoration:none;transition:border-color .3s,transform .3s}
-    .contact-card:hover{border-color:rgba(0,212,255,.35);transform:translateY(-3px)}
-    .contact-icon{width:52px;height:52px;background:var(--cyan-dim);border:1px solid rgba(0,212,255,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
-    .contact-info label{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
-    .contact-info p{color:var(--cyan);font-weight:600;font-size:.95rem;margin-top:.2rem}
-    .btn-secondary{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:var(--text);font-weight:500;font-size:.95rem;padding:.85rem 2rem;border-radius:8px;border:1px solid var(--border);text-decoration:none;transition:all .2s;margin-top:2rem}
-    .btn-secondary:hover{border-color:var(--cyan);color:var(--cyan)}
-    footer{border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.83rem}
-    footer a{color:var(--cyan);text-decoration:none}
-    .footer-logo{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:.8rem}
-    .footer-logo img{width:26px;height:26px;border-radius:6px}
-    .footer-logo span{font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;color:var(--white)}
-    .footer-logo span b{color:var(--cyan)}
-  </style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #07090f; --surface: #0d1120; --surface2: #121828;
+      --border: rgba(255,255,255,0.08);
+      --cyan: #00c8f0; --cyan-dim: rgba(0,200,240,0.1); --cyan-glow: rgba(0,200,240,0.28);
+      --gold: #f59e0b; --gold-dim: rgba(245,158,11,0.1);
+      --text: #dde4f0; --muted: #5a6a82; --white: #ffffff;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: 'Inter', sans-serif; font-weight: 400;
+      overflow-x: hidden; -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0 2rem; height: 62px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(7,9,15,0.92); backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo img { width: 34px; height: 34px; border-radius: 8px; object-fit: cover; }
+    .logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--white); letter-spacing: -0.01em; }
+    .logo-text span { color: var(--cyan); }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
+    .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+    .nav-cta { background: var(--cyan) !important; color: #000 !important; padding: 0.45rem 1.1rem; border-radius: 6px; font-weight: 700 !important; }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; color: var(--text); }
+    .nav-toggle svg { width: 22px; height: 22px; }
+    .mobile-menu {
+      display: none; position: fixed; top: 62px; left: 0; right: 0; z-index: 99;
+      background: rgba(7,9,15,0.97); border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem 1.5rem; flex-direction: column; gap: 0.2rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: var(--text); text-decoration: none; font-size: 1rem; font-weight: 500; padding: 0.75rem 0; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+    .mobile-menu a:last-child { border-bottom: none; color: var(--cyan); font-weight: 700; }
+    .mobile-menu a:hover { color: var(--cyan); }
+    @media (max-width: 768px) { .nav-links { display: none; } .nav-toggle { display: block; } nav { padding: 0 1.25rem; } }
+    /* TYPOGRAPHY */
+    h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.2rem, 7vw, 4rem); font-weight: 700; line-height: 1.08; letter-spacing: -0.03em; color: var(--white); margin-bottom: 1rem; }
+    h1 em { font-style: normal; color: var(--cyan); }
+    h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 700; letter-spacing: -0.03em; color: var(--white); margin-bottom: 0.7rem; line-height: 1.1; }
+    h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 0.45rem; }
+    /* LAYOUT */
+    .section-wrap { padding: 5rem 1.25rem; max-width: 1060px; margin: 0 auto; }
+    .page-hero { padding: 6rem 1.25rem 3rem; max-width: 1060px; margin: 0 auto; }
+    .section-label { display: inline-flex; align-items: center; gap: 8px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.13em; color: var(--cyan); margin-bottom: 0.7rem; }
+    .section-label::before { content: ''; width: 16px; height: 1px; background: var(--cyan); }
+    .section-label.gold { color: var(--gold); }
+    .section-label.gold::before { background: var(--gold); }
+    .section-intro { color: var(--muted); font-size: 0.92rem; max-width: 460px; line-height: 1.75; margin-bottom: 2.5rem; }
+    /* BUTTONS */
+    .btn-primary { display: inline-flex; align-items: center; gap: 7px; background: var(--cyan); color: #000; font-weight: 700; font-size: 0.9rem; padding: 0.8rem 1.75rem; border-radius: 8px; text-decoration: none; transition: all 0.2s; box-shadow: 0 0 26px var(--cyan-glow); white-space: nowrap; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 44px var(--cyan-glow); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 7px; background: transparent; color: var(--text); font-weight: 500; font-size: 0.9rem; padding: 0.8rem 1.75rem; border-radius: 8px; border: 1px solid var(--border); text-decoration: none; transition: all 0.2s; white-space: nowrap; }
+    .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
+    .hero-actions { display: flex; gap: 0.75rem; justify-content: flex-start; flex-wrap: wrap; margin-top: 2rem; }
+    /* CARDS */
+    .card-icon { width: 46px; height: 46px; background: var(--cyan-dim); border: 1px solid rgba(0,200,240,0.18); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 1.25rem; }
+    .card-icon.gold { background: var(--gold-dim); border-color: rgba(245,158,11,0.22); }
+    /* CTA STRIP */
+    .cta-strip { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 3rem 1.5rem; text-align: center; position: relative; overflow: hidden; max-width: 1060px; margin: 0 auto 5rem; }
+    .cta-strip::before { content: ''; position: absolute; top: -60px; left: 50%; transform: translateX(-50%); width: 280px; height: 280px; background: radial-gradient(circle, var(--cyan-glow) 0%, transparent 70%); pointer-events: none; }
+    .cta-strip h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: 0.6rem; }
+    .cta-strip p { color: var(--muted); margin-bottom: 1.8rem; font-size: 0.92rem; }
+    .cta-buttons { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.25rem; text-align: center; color: var(--muted); font-size: 0.82rem; }
+    footer a { color: var(--cyan); text-decoration: none; }
+    .footer-logo { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 0.8rem; }
+    .footer-logo img { width: 26px; height: 26px; border-radius: 6px; }
+    .footer-logo span { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--white); }
+    .footer-logo span b { color: var(--cyan); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+
+    .hero-sub { color: var(--muted); font-size: clamp(0.92rem, 2.5vw, 1.02rem); max-width: 520px; line-height: 1.75; margin-top: 0.8rem; }
+    .about-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 2.5rem; display: grid; grid-template-columns: auto 1fr; gap: 2.5rem; align-items: center; }
+    @media (max-width: 640px) { .about-card { grid-template-columns: 1fr; text-align: center; } }
+    .about-logo-wrap { text-align: center; }
+    .about-logo-img { width: 120px; height: 120px; border-radius: 50%; box-shadow: 0 0 50px var(--cyan-glow); display: block; margin: 0 auto; }
+    .brand-name { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--white); margin-top: 0.9rem; }
+    .brand-name span { color: var(--cyan); }
+    .brand-tag { display: inline-block; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; background: var(--cyan-dim); color: var(--cyan); padding: 0.28rem 0.75rem; border-radius: 100px; margin-top: 0.5rem; }
+    .about-text p { color: var(--muted); font-size: 0.92rem; line-height: 1.8; margin-bottom: 0.9rem; }
+    .about-text p:last-child { margin-bottom: 0; }
+    .values-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    @media (max-width: 580px) { .values-grid { grid-template-columns: 1fr; } }
+    .value-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.75rem; transition: border-color 0.25s, transform 0.25s; }
+    .value-card:hover { border-color: rgba(0,200,240,0.3); transform: translateY(-3px); }
+    .value-icon { font-size: 1.6rem; margin-bottom: 0.9rem; }
+    .value-card p { color: var(--muted); font-size: 0.86rem; line-height: 1.65; margin-top: 0.3rem; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    @media (max-width: 580px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.75rem; display: flex; align-items: center; gap: 1.25rem; text-decoration: none; transition: border-color 0.25s, transform 0.25s; }
+    .contact-card:hover { border-color: rgba(0,200,240,0.35); transform: translateY(-3px); }
+    .contact-info label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .contact-info p { color: var(--cyan); font-weight: 600; font-size: 0.92rem; margin-top: 0.2rem; }
+</style>
 </head>
 <body>
 <nav>
@@ -3405,25 +3457,41 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAD2WEAZap7BBur1ZhvlYG5LBj/MUWrTQj2Nr3j6kAWUIZYKsym9CWKL
-wycX0eJCgdEofO5l08UMyBcvBpLeX2eTCK8I" alt="FarincalTec"/>
+wycX0eJCgdEofO5l08UMyBcvBpLeX2eTCK8I" alt="FarincalTec logo"/>
     <span class="logo-text">Farincal<span>Tec</span></span>
   </a>
-  <ul class="nav-links">
-    <li><a href="index.html#servicios">Servicios</a></li>
-    <li><a href="google.html">Google Negocios</a></li>
-    <li><a href="crypto.html">Crypto</a></li>
-    <li><a href="sobre.html" class="active">Sobre Nosotros</a></li>
+  <ul class="nav-links"><li><a href="index.html#servicios">Servicios</a></li>
+<li><a href="google.html">Google Negocios</a></li>
+<li><a href="crypto.html">Crypto</a></li>
+<li><a href="sobre.html" class="active">Sobre Nosotros</a></li>
+
     <li><a href="https://wa.me/34678218084" class="nav-cta">WhatsApp</a></li>
   </ul>
+  <button class="nav-toggle" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
 </nav>
+<div class="mobile-menu">
+  <a href="index.html#servicios" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Servicios</a>
+<a href="google.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Google Negocios</a>
+<a href="crypto.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Crypto</a>
+<a href="sobre.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Sobre Nosotros</a>
 
+  <a href="https://wa.me/34678218084">💬 WhatsApp</a>
+</div>
 <div class="page-hero">
   <div class="section-label">Sobre Nosotros</div>
   <h1>Tecnología con<br/><em>rostro humano</em></h1>
-  <p class="hero-sub">En FarincalTec creemos que la tecnología debe estar al servicio de las personas, no al revés. Por eso trabajamos de forma cercana, transparente y sin tecnicismos innecesarios.</p>
+  <p class="hero-sub">En FarincalTec creemos que la tecnología debe estar al servicio de las personas, no al revés. Trabajo cercano, transparente y sin tecnicismos innecesarios.</p>
+  <div class="hero-actions">
+    <a href="https://wa.me/34678218084" class="btn-primary">💬 Contáctanos</a>
+    <a href="index.html" class="btn-secondary">← Volver al inicio</a>
+  </div>
 </div>
 
-<section>
+<div class="section-wrap">
   <div class="about-card">
     <div class="about-logo-wrap">
       <img class="about-logo-img" src="data:image/webp;base64,UklGRvjnAgBXRUJQVlA4INCUAQBwegWdASoABAAEPjEYikOiIaKlJrVqGKAGCWVqNsm7VmA/w9+H
@@ -6775,12 +6843,11 @@ wycX0eJCgdEofO5l08UMyBcvBpLeX2eTCK8I" alt="FarincalTec"/>
       <p>FarincalTec nació con una misión clara: acercar la tecnología a personas y negocios en Barcelona de forma honesta, directa y sin complicaciones innecesarias.</p>
       <p>Ofrecemos soporte técnico a domicilio, optimización de presencia en Google y formación en criptomonedas y blockchain. Tres áreas muy distintas, pero con el mismo denominador común: ayudarte a sacar el máximo partido a las herramientas digitales de forma segura.</p>
       <p>Trabajamos directamente contigo, sin subcontratas ni intermediarios. Cuando nos llamas, hablas con alguien que conoce tu caso y se preocupa por resolverlo.</p>
-      <a href="index.html" class="btn-secondary">← Ver todos los servicios</a>
     </div>
   </div>
-</section>
+</div>
 
-<section>
+<div class="section-wrap" style="padding-top:0">
   <div class="section-label">Nuestros valores</div>
   <h2>Lo que nos define</h2>
   <div class="values-grid">
@@ -6805,28 +6872,28 @@ wycX0eJCgdEofO5l08UMyBcvBpLeX2eTCK8I" alt="FarincalTec"/>
       <p>No queremos que dependas de nosotros para siempre. Te enseñamos a usar la tecnología por ti mismo.</p>
     </div>
   </div>
-</section>
+</div>
 
-<section>
+<div class="section-wrap" style="padding-top:0">
   <div class="section-label">Contacto</div>
   <h2>Estamos aquí<br/>para ayudarte</h2>
   <div class="contact-grid">
     <a href="https://wa.me/34678218084" class="contact-card">
-      <div class="contact-icon">💬</div>
+      <div class="card-icon">💬</div>
       <div class="contact-info">
         <label>WhatsApp (respuesta rápida)</label>
         <p>+34 678 218 084</p>
       </div>
     </a>
     <a href="mailto:farincaltec@gmail.com" class="contact-card">
-      <div class="contact-icon">✉️</div>
+      <div class="card-icon">✉️</div>
       <div class="contact-info">
         <label>Correo electrónico</label>
         <p>farincaltec@gmail.com</p>
       </div>
     </a>
   </div>
-</section>
+</div>
 
 <footer>
   <div class="footer-logo">
@@ -10175,7 +10242,10 @@ wycX0eJCgdEofO5l08UMyBcvBpLeX2eTCK8I" alt="logo"/>
     <span>Farincal<b>Tec</b></span>
   </div>
   <p>© 2025 FarincalTec · Tecnología segura para todos · Barcelona</p>
-  <p style="margin-top:.5rem"><a href="https://wa.me/34678218084">WhatsApp</a> · <a href="mailto:farincaltec@gmail.com">Email</a></p>
+  <p style="margin-top:0.5rem">
+    <a href="https://wa.me/34678218084">WhatsApp</a> ·
+    <a href="mailto:farincaltec@gmail.com">Email</a>
+  </p>
 </footer>
 </body>
 </html>

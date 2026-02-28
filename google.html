@@ -2,62 +2,108 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Google para Negocios | FarincalTec Barcelona</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--bg:#080c14;--surface:#0d1421;--surface2:#111827;--border:rgba(255,255,255,0.07);--cyan:#00d4ff;--cyan-dim:rgba(0,212,255,0.1);--cyan-glow:rgba(0,212,255,0.3);--gold:#f59e0b;--green:#22c55e;--text:#e2e8f0;--muted:#64748b;--white:#ffffff}
-    html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2.5rem;display:flex;align-items:center;justify-content:space-between;background:rgba(8,12,20,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-    .logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
-    .logo img{width:36px;height:36px;border-radius:8px;object-fit:cover}
-    .logo-text{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--white)}
-    .logo-text span{color:var(--cyan)}
-    .nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
-    .nav-links a{color:var(--muted);text-decoration:none;font-size:.875rem;font-weight:500;transition:color .2s}
-    .nav-links a:hover,.nav-links a.active{color:var(--cyan)}
-    .nav-cta{background:var(--cyan)!important;color:#000!important;padding:.5rem 1.2rem;border-radius:6px;font-weight:700!important}
-    @media(max-width:768px){.nav-links{display:none}nav{padding:1rem 1.5rem}}
-    .page-hero{padding:9rem 2rem 5rem;max-width:1100px;margin:0 auto;position:relative}
-    .page-hero::before{content:'';position:absolute;top:0;left:-200px;right:-200px;height:400px;background:radial-gradient(ellipse 60% 60% at 30% 50%,rgba(0,212,255,.07) 0%,transparent 60%);pointer-events:none}
-    .section-label{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--cyan);margin-bottom:.8rem}
-    .section-label::before{content:'';width:18px;height:1px;background:var(--cyan)}
-    h1{font-family:'Syne',sans-serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:800;line-height:1.05;letter-spacing:-.03em;color:var(--white);margin-bottom:1rem}
-    h1 em{font-style:normal;color:var(--cyan)}
-    .hero-sub{color:var(--muted);font-size:1rem;max-width:520px;line-height:1.75;margin-bottom:2rem}
-    .btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--cyan);color:#000;font-weight:700;font-size:.95rem;padding:.85rem 2rem;border-radius:8px;text-decoration:none;transition:all .2s;box-shadow:0 0 28px var(--cyan-glow)}
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 0 50px var(--cyan-glow)}
-    .btn-secondary{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:var(--text);font-weight:500;font-size:.95rem;padding:.85rem 2rem;border-radius:8px;border:1px solid var(--border);text-decoration:none;transition:all .2s;margin-left:.5rem}
-    .btn-secondary:hover{border-color:var(--cyan);color:var(--cyan)}
-    section{padding:5rem 2rem;max-width:1100px;margin:0 auto}
-    h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-.03em;color:var(--white);margin-bottom:.7rem}
-    .section-intro{color:var(--muted);font-size:.95rem;max-width:480px;line-height:1.75;margin-bottom:2.5rem}
-    .benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
-    .benefit-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.8rem;transition:border-color .3s,transform .3s}
-    .benefit-card:hover{border-color:rgba(0,212,255,.3);transform:translateY(-4px)}
-    .benefit-icon{font-size:1.8rem;margin-bottom:1rem}
-    .benefit-card h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:.4rem}
-    .benefit-card p{color:var(--muted);font-size:.85rem;line-height:1.65}
-    .process-list{display:flex;flex-direction:column;gap:1rem}
-    .process-step{display:flex;align-items:flex-start;gap:1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.8rem;transition:border-color .3s}
-    .process-step:hover{border-color:rgba(0,212,255,.25)}
-    .step-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:var(--cyan);opacity:.4;line-height:1;flex-shrink:0;min-width:40px}
-    .step-content h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:.3rem}
-    .step-content p{color:var(--muted);font-size:.875rem;line-height:1.65}
-    .cta-strip{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:3rem;text-align:center;max-width:1100px;margin:0 auto 5rem;position:relative;overflow:hidden}
-    .cta-strip::before{content:'';position:absolute;top:-50px;left:50%;transform:translateX(-50%);width:250px;height:250px;background:radial-gradient(circle,rgba(0,212,255,.25) 0%,transparent 70%);pointer-events:none}
-    .cta-strip h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:.6rem}
-    .cta-strip p{color:var(--muted);margin-bottom:1.8rem}
-    footer{border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.83rem}
-    footer a{color:var(--cyan);text-decoration:none}
-    .footer-logo{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-bottom:.8rem}
-    .footer-logo img{width:26px;height:26px;border-radius:6px}
-    .footer-logo span{font-family:'Syne',sans-serif;font-weight:700;font-size:.95rem;color:var(--white)}
-    .footer-logo span b{color:var(--cyan)}
-  </style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #07090f; --surface: #0d1120; --surface2: #121828;
+      --border: rgba(255,255,255,0.08);
+      --cyan: #00c8f0; --cyan-dim: rgba(0,200,240,0.1); --cyan-glow: rgba(0,200,240,0.28);
+      --gold: #f59e0b; --gold-dim: rgba(245,158,11,0.1);
+      --text: #dde4f0; --muted: #5a6a82; --white: #ffffff;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: 'Inter', sans-serif; font-weight: 400;
+      overflow-x: hidden; -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 0 2rem; height: 62px;
+      display: flex; align-items: center; justify-content: space-between;
+      background: rgba(7,9,15,0.92); backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; flex-shrink: 0; }
+    .logo img { width: 34px; height: 34px; border-radius: 8px; object-fit: cover; }
+    .logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--white); letter-spacing: -0.01em; }
+    .logo-text span { color: var(--cyan); }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; white-space: nowrap; }
+    .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+    .nav-cta { background: var(--cyan) !important; color: #000 !important; padding: 0.45rem 1.1rem; border-radius: 6px; font-weight: 700 !important; }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; color: var(--text); }
+    .nav-toggle svg { width: 22px; height: 22px; }
+    .mobile-menu {
+      display: none; position: fixed; top: 62px; left: 0; right: 0; z-index: 99;
+      background: rgba(7,9,15,0.97); border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem 1.5rem; flex-direction: column; gap: 0.2rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { color: var(--text); text-decoration: none; font-size: 1rem; font-weight: 500; padding: 0.75rem 0; border-bottom: 1px solid var(--border); transition: color 0.2s; }
+    .mobile-menu a:last-child { border-bottom: none; color: var(--cyan); font-weight: 700; }
+    .mobile-menu a:hover { color: var(--cyan); }
+    @media (max-width: 768px) { .nav-links { display: none; } .nav-toggle { display: block; } nav { padding: 0 1.25rem; } }
+    /* TYPOGRAPHY */
+    h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.2rem, 7vw, 4rem); font-weight: 700; line-height: 1.08; letter-spacing: -0.03em; color: var(--white); margin-bottom: 1rem; }
+    h1 em { font-style: normal; color: var(--cyan); }
+    h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 700; letter-spacing: -0.03em; color: var(--white); margin-bottom: 0.7rem; line-height: 1.1; }
+    h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 0.45rem; }
+    /* LAYOUT */
+    .section-wrap { padding: 5rem 1.25rem; max-width: 1060px; margin: 0 auto; }
+    .page-hero { padding: 6rem 1.25rem 3rem; max-width: 1060px; margin: 0 auto; }
+    .section-label { display: inline-flex; align-items: center; gap: 8px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.13em; color: var(--cyan); margin-bottom: 0.7rem; }
+    .section-label::before { content: ''; width: 16px; height: 1px; background: var(--cyan); }
+    .section-label.gold { color: var(--gold); }
+    .section-label.gold::before { background: var(--gold); }
+    .section-intro { color: var(--muted); font-size: 0.92rem; max-width: 460px; line-height: 1.75; margin-bottom: 2.5rem; }
+    /* BUTTONS */
+    .btn-primary { display: inline-flex; align-items: center; gap: 7px; background: var(--cyan); color: #000; font-weight: 700; font-size: 0.9rem; padding: 0.8rem 1.75rem; border-radius: 8px; text-decoration: none; transition: all 0.2s; box-shadow: 0 0 26px var(--cyan-glow); white-space: nowrap; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 44px var(--cyan-glow); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 7px; background: transparent; color: var(--text); font-weight: 500; font-size: 0.9rem; padding: 0.8rem 1.75rem; border-radius: 8px; border: 1px solid var(--border); text-decoration: none; transition: all 0.2s; white-space: nowrap; }
+    .btn-secondary:hover { border-color: var(--cyan); color: var(--cyan); }
+    .hero-actions { display: flex; gap: 0.75rem; justify-content: flex-start; flex-wrap: wrap; margin-top: 2rem; }
+    /* CARDS */
+    .card-icon { width: 46px; height: 46px; background: var(--cyan-dim); border: 1px solid rgba(0,200,240,0.18); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; margin-bottom: 1.25rem; }
+    .card-icon.gold { background: var(--gold-dim); border-color: rgba(245,158,11,0.22); }
+    /* CTA STRIP */
+    .cta-strip { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 3rem 1.5rem; text-align: center; position: relative; overflow: hidden; max-width: 1060px; margin: 0 auto 5rem; }
+    .cta-strip::before { content: ''; position: absolute; top: -60px; left: 50%; transform: translateX(-50%); width: 280px; height: 280px; background: radial-gradient(circle, var(--cyan-glow) 0%, transparent 70%); pointer-events: none; }
+    .cta-strip h2 { font-size: clamp(1.5rem, 4vw, 2rem); margin-bottom: 0.6rem; }
+    .cta-strip p { color: var(--muted); margin-bottom: 1.8rem; font-size: 0.92rem; }
+    .cta-buttons { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.25rem; text-align: center; color: var(--muted); font-size: 0.82rem; }
+    footer a { color: var(--cyan); text-decoration: none; }
+    .footer-logo { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 0.8rem; }
+    .footer-logo img { width: 26px; height: 26px; border-radius: 6px; }
+    .footer-logo span { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--white); }
+    .footer-logo span b { color: var(--cyan); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
+
+    .page-hero { position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; top: -80px; left: -150px; width: 500px; height: 500px; background: radial-gradient(ellipse, rgba(0,200,240,0.07) 0%, transparent 65%); pointer-events: none; }
+    .hero-sub { color: var(--muted); font-size: clamp(0.92rem, 2.5vw, 1.02rem); max-width: 520px; line-height: 1.75; margin-top: 0.8rem; }
+    .benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    @media (max-width: 600px) { .benefits-grid { grid-template-columns: 1fr; } }
+    .benefit-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.75rem; transition: border-color 0.25s, transform 0.25s; }
+    .benefit-card:hover { border-color: rgba(0,200,240,0.3); transform: translateY(-3px); }
+    .benefit-icon { font-size: 1.7rem; margin-bottom: 0.9rem; }
+    .benefit-card p { color: var(--muted); font-size: 0.86rem; line-height: 1.68; }
+    .process-list { display: flex; flex-direction: column; gap: 1rem; }
+    .process-step { display: flex; align-items: flex-start; gap: 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.75rem; transition: border-color 0.25s; }
+    .process-step:hover { border-color: rgba(0,200,240,0.25); }
+    .step-num { font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: var(--cyan); opacity: 0.35; line-height: 1; flex-shrink: 0; min-width: 36px; }
+    .step-content p { color: var(--muted); font-size: 0.875rem; line-height: 1.68; margin-top: 0.3rem; }
+</style>
 </head>
 <body>
 <nav>
@@ -3403,27 +3449,41 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAD2WEAZap7BBur1ZhvlYG5LBj/MUWrTQj2Nr3j6kAWUIZYKsym9CWKL
-wycX0eJCgdEofO5l08UMyBcvBpLeX2eTCK8I" alt="FarincalTec"/>
+wycX0eJCgdEofO5l08UMyBcvBpLeX2eTCK8I" alt="FarincalTec logo"/>
     <span class="logo-text">Farincal<span>Tec</span></span>
   </a>
-  <ul class="nav-links">
-    <li><a href="index.html#servicios">Servicios</a></li>
-    <li><a href="google.html" class="active">Google Negocios</a></li>
-    <li><a href="crypto.html">Crypto</a></li>
-    <li><a href="sobre.html">Sobre Nosotros</a></li>
+  <ul class="nav-links"><li><a href="index.html#servicios">Servicios</a></li>
+<li><a href="google.html" class="active">Google Negocios</a></li>
+<li><a href="crypto.html">Crypto</a></li>
+<li><a href="sobre.html">Sobre Nosotros</a></li>
+
     <li><a href="https://wa.me/34678218084" class="nav-cta">WhatsApp</a></li>
   </ul>
+  <button class="nav-toggle" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
 </nav>
+<div class="mobile-menu">
+  <a href="index.html#servicios" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Servicios</a>
+<a href="google.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Google Negocios</a>
+<a href="crypto.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Crypto</a>
+<a href="sobre.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Sobre Nosotros</a>
 
+  <a href="https://wa.me/34678218084">💬 WhatsApp</a>
+</div>
 <div class="page-hero">
   <div class="section-label">Google para Negocios</div>
   <h1>Más clientes locales<br/>con <em>Google Business</em></h1>
   <p class="hero-sub">Actualizamos y optimizamos tu perfil de Google Business para que tu negocio aparezca primero cuando los clientes te buscan en Barcelona.</p>
-  <a href="https://wa.me/34678218084" class="btn-primary">💬 Solicitar consulta gratis</a>
-  <a href="index.html" class="btn-secondary">← Volver al inicio</a>
+  <div class="hero-actions">
+    <a href="https://wa.me/34678218084" class="btn-primary">💬 Solicitar consulta gratis</a>
+    <a href="index.html" class="btn-secondary">← Volver al inicio</a>
+  </div>
 </div>
 
-<section>
+<div class="section-wrap">
   <div class="section-label">¿Por qué importa?</div>
   <h2>Tu negocio visible donde<br/>tus clientes te buscan</h2>
   <p class="section-intro">El 80% de los consumidores buscan negocios locales en Google antes de visitar. Si no apareces, pierdes clientes cada día.</p>
@@ -3431,7 +3491,7 @@ wycX0eJCgdEofO5l08UMyBcvBpLeX2eTCK8I" alt="FarincalTec"/>
     <div class="benefit-card">
       <div class="benefit-icon">📍</div>
       <h3>Visibilidad Local</h3>
-      <p>Aparece en las búsquedas de Google Maps y resultados locales cuando alguien busca tu servicio en tu zona.</p>
+      <p>Aparece en Google Maps y búsquedas locales cuando alguien busca tu servicio en tu zona.</p>
     </div>
     <div class="benefit-card">
       <div class="benefit-icon">⭐</div>
@@ -3446,12 +3506,12 @@ wycX0eJCgdEofO5l08UMyBcvBpLeX2eTCK8I" alt="FarincalTec"/>
     <div class="benefit-card">
       <div class="benefit-icon">📸</div>
       <h3>Perfil Optimizado</h3>
-      <p>Fotos, horarios, descripción y categorías correctas para que Google te posicione por encima de la competencia.</p>
+      <p>Fotos, horarios, descripción y categorías correctas para posicionarte por encima de la competencia.</p>
     </div>
   </div>
-</section>
+</div>
 
-<section>
+<div class="section-wrap" style="padding-top:0">
   <div class="section-label">Nuestro proceso</div>
   <h2>Así trabajamos<br/>contigo</h2>
   <p class="section-intro">Un proceso simple, transparente y sin tecnicismos. Tú te centras en tu negocio, nosotros en hacerte visible.</p>
@@ -3478,12 +3538,15 @@ wycX0eJCgdEofO5l08UMyBcvBpLeX2eTCK8I" alt="FarincalTec"/>
       </div>
     </div>
   </div>
-</section>
+</div>
 
 <div class="cta-strip">
-  <h2>¿Tu negocio aún no está en Google?</h2>
+  <h2>¿Tu negocio aún no está optimizado en Google?</h2>
   <p>Contáctanos y hacemos la primera consulta completamente gratis.</p>
-  <a href="https://wa.me/34678218084" class="btn-primary">💬 WhatsApp: +34 678 218 084</a>
+  <div class="cta-buttons">
+    <a href="https://wa.me/34678218084" class="btn-primary">💬 WhatsApp: +34 678 218 084</a>
+    <a href="mailto:farincaltec@gmail.com" class="btn-secondary">✉️ farincaltec@gmail.com</a>
+  </div>
 </div>
 
 <footer>
@@ -6833,7 +6896,10 @@ wycX0eJCgdEofO5l08UMyBcvBpLeX2eTCK8I" alt="logo"/>
     <span>Farincal<b>Tec</b></span>
   </div>
   <p>© 2025 FarincalTec · Tecnología segura para todos · Barcelona</p>
-  <p style="margin-top:.5rem"><a href="https://wa.me/34678218084">WhatsApp</a> · <a href="mailto:farincaltec@gmail.com">Email</a></p>
+  <p style="margin-top:0.5rem">
+    <a href="https://wa.me/34678218084">WhatsApp</a> ·
+    <a href="mailto:farincaltec@gmail.com">Email</a>
+  </p>
 </footer>
 </body>
 </html>
