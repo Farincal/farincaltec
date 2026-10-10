@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-RB6oyTQ8q3jUDut/CJCQceojpjzONkTjcPlWLv1sgtY='; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Google para Negocios | FarincalTec Barcelona</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -3799,7 +3801,7 @@ wycX0eJCgdEofO5l08UMyBcvBpLeX2eTCK8I" alt="FarincalTec logo"/>
     <li><a href="sobre.html">Sobre Nosotros</a></li>
     <li><a href="https://wa.me/34678218084" class="nav-cta">WhatsApp</a></li>
   </ul>
-  <button class="nav-toggle" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
+  <button class="nav-toggle" aria-label="Menu">
     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
     </svg>
@@ -3808,7 +3810,7 @@ wycX0eJCgdEofO5l08UMyBcvBpLeX2eTCK8I" alt="FarincalTec logo"/>
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu">
-  <a href="#servicios" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Servicios</a>
+  <a href="#servicios">Servicios</a>
   <a href="google.html" class="active">Google Negocios</a>
   <a href="crypto.html">Crypto</a>
   <a href="sobre.html">Sobre Nosotros</a>
@@ -7243,5 +7245,9 @@ wycX0eJCgdEofO5l08UMyBcvBpLeX2eTCK8I" alt="logo"/>
   </div>
   <p>© 2025 FarincalTec · Tecnología segura para todos · Barcelona</p>
   <p style="margin-top:0.5rem">
+<script>
+document.querySelector('.nav-toggle').addEventListener('click',function(){document.querySelector('.mobile-menu').classList.toggle('open');});
+document.querySelectorAll('.mobile-menu a').forEach(function(a){a.addEventListener('click',function(){document.querySelector('.mobile-menu').classList.remove('open');});});
+</script>
 </body>
 </html>
