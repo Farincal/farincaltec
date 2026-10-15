@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-Kz7dkSEvBUyb3fBeYyFt0Uj56nIDTV6bAHQ13zXJSDs='; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-Kz7dkSEvBUyb3fBeYyFt0Uj56nIDTV6bAHQ13zXJSDs='; style-src 'unsafe-inline'; font-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>FarincalTec · Google Maps, reseñas y redes para comercios de Barcelona</title>
 <meta name="description" content="Más clientes para tu negocio de Barcelona: ficha de Google optimizada, reseñas, campañas de ADS, redes sociales y webs rápidas y seguras. En español y portugués. Primera revisión gratis.">
@@ -15,10 +15,11 @@
 <meta property="og:description" content="Google Maps, reseñas, ADS, redes sociales y webs seguras para el comercio de Barcelona. Primera revisión gratis.">
 <meta property="og:locale" content="es_ES">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"FarincalTec","url":"https://farincaltec.com/","telephone":"+34678218084","email":"farincaltec@gmail.com","areaServed":"Barcelona","address":{"@type":"PostalAddress","addressLocality":"Barcelona","addressCountry":"ES"},"availableLanguage":["es","pt"],"priceRange":"89€-299€"}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Source+Sans+3:wght@400;600;700&display=swap">
 <style>
+@font-face{font-family:"Bricolage Grotesque";src:url("fonts/bricolage-grotesque.woff2") format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("fonts/source-sans-3-400.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("fonts/source-sans-3-600.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Source Sans 3";src:url("fonts/source-sans-3-700.woff2") format("woff2");font-weight:700;font-display:swap}
 /* Neon do cartaz da FarincalTec: azul-noite profundo, ciano elétrico, violeta, rosa e ouro.
    Cena 3D no topo (celular com o ranking do Maps + cartões flutuando em profundidade). */
 :root{
@@ -250,6 +251,7 @@ footer{padding-block:56px 64px;font-size:16px;color:var(--soft);border-top:1px s
 .foot h4{font-family:var(--display);font-size:18px;color:var(--ink);margin:0 0 12px}
 .foot ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
 .foot a{text-decoration:none}.foot a:hover{color:var(--cyan)}
+.legal a{text-decoration:none}.legal a:hover{color:var(--cyan)}
 .legal{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:14px;display:flex;flex-wrap:wrap;gap:8px 24px}
 
 /* revelar ao rolar */
@@ -508,9 +510,9 @@ footer{padding-block:56px 64px;font-size:16px;color:var(--soft);border-top:1px s
     </div>
     <div class="legal">
       <span>© 2026 FarincalTec, Barcelona</span>
-      <span data-es="Aviso legal" data-pt="Aviso legal">Aviso legal</span>
-      <span data-es="Privacidad" data-pt="Privacidade">Privacidad</span>
-      <span>Cookies</span>
+      <a href="aviso-legal.html">Aviso legal</a>
+      <a href="privacidad.html">Política de privacidad</a>
+      <a href="cookies.html">Política de cookies</a>
     </div>
   </div>
 </footer>

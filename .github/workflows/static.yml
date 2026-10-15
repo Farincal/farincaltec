@@ -31,7 +31,8 @@ jobs:
       - name: Preparar arquivos publicados
         run: |
           mkdir _site
-          cp index.html sobre.html crypto.html google.html _site/
+          cp index.html sobre.html crypto.html google.html aviso-legal.html privacidad.html cookies.html _site/
+          cp -r fonts _site/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
