@@ -3,9 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-4r4qyeTxuZyFRDQa7AQ2DwlNzuen+/NtOmO0FZlWiVU='; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-VgrV/1UbjSV6aNHuKdEDsE3+K45D6tGhbiievkGhP2Q='; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>FarincalTec</title>
+<title>FarincalTec · Google Maps, reseñas y redes para comercios de Barcelona</title>
+<meta name="description" content="Más clientes para tu negocio de Barcelona: ficha de Google optimizada, reseñas, campañas de ADS, redes sociales y webs rápidas y seguras. En español y portugués. Primera revisión gratis.">
+<link rel="canonical" href="https://farincaltec.com/">
+<meta name="theme-color" content="#0A0D1C">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://farincaltec.com/">
+<meta property="og:title" content="FarincalTec · Visibilidad para el comercio local de Barcelona">
+<meta property="og:description" content="Google Maps, reseñas, ADS, redes sociales y webs seguras. Primera revisión gratis.">
+<meta property="og:locale" content="es_ES">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"FarincalTec","url":"https://farincaltec.com/","telephone":"+34678218084","email":"farincaltec@gmail.com","areaServed":"Barcelona","address":{"@type":"PostalAddress","addressLocality":"Barcelona","addressCountry":"ES"},"availableLanguage":["es","pt"],"priceRange":"89€-299€"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -29,7 +38,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-siz
 body::before{content:"";position:fixed;inset:0;z-index:-3;opacity:.5;pointer-events:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' fill='none' stroke='%234FD6E8' stroke-opacity='.17' stroke-width='1'%3E%3Cpath d='M0 40h52l16 16h64M220 70h-40l-18-18h-52M0 150h30l20-20h70M220 186h-60l-22 22H70'/%3E%3Cpath d='M40 0v30l14 14v40M150 220v-44l16-16V60M98 0v22M186 0v34l12 12'/%3E%3Ccircle cx='52' cy='40' r='3'/%3E%3Ccircle cx='132' cy='56' r='3'/%3E%3Ccircle cx='120' cy='130' r='3'/%3E%3Ccircle cx='70' cy='208' r='3'/%3E%3Ccircle cx='180' cy='70' r='3'/%3E%3Crect x='94' y='18' width='6' height='6'/%3E%3Crect x='204' y='96' width='6' height='6'/%3E%3Crect x='24' y='170' width='6' height='6'/%3E%3C/svg%3E")}
 /* grão */
-body::after{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;opacity:.42;mix-blend-mode:overlay;
+body::after{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.22;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E")}
 h1,h2,h3{margin:0;line-height:1.02;letter-spacing:-.01em;text-wrap:balance;font-family:var(--font-display);font-weight:700;text-transform:uppercase}
 p{margin:0}
@@ -51,6 +60,7 @@ nav a:hover{color:var(--ink)} nav a:hover::after{right:0}
 .lang button{background:none;border:0;padding:6px 11px;color:var(--muted);cursor:pointer;font:inherit}
 .lang button[aria-pressed="true"]{background:rgba(79,214,232,.15);color:var(--cy)}
 @media(min-width:1000px){nav{display:flex}}
+@media(max-width:560px){.brand{font-size:22px}.bar .right .btn-primary{padding:11px}.bar .right .btn-primary span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}}
 
 .btn{display:inline-flex;align-items:center;gap:9px;border-radius:999px;padding:12px 22px;font-weight:600;font-size:15px;border:1px solid transparent;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
 .btn-primary{background:linear-gradient(100deg,var(--cy),var(--bl));color:#070A16;box-shadow:0 10px 30px -10px rgba(91,107,240,.85)}
@@ -61,7 +71,53 @@ nav a:hover{color:var(--ink)} nav a:hover::after{right:0}
 @media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
 
 .hero{position:relative;isolation:isolate;padding-block:70px 86px;border-bottom:1px solid var(--line)}
-#mesh{position:absolute;inset:0;width:100%;height:100%;z-index:-2;filter:blur(48px) saturate(160%);opacity:.92}
+/* fundo do herói: luz fixa atrás do cartão + grade em perspectiva (sem nuvem em movimento) */
+.hero-bg{position:absolute;inset:0;z-index:-2;overflow:hidden;pointer-events:none;
+  background:radial-gradient(42% 55% at 78% 52%,rgba(91,107,240,.30),transparent 70%),
+             radial-gradient(30% 40% at 88% 30%,rgba(79,214,232,.16),transparent 70%)}
+.hero-bg::before{content:"";position:absolute;left:-10%;right:-10%;bottom:-6%;height:62%;
+  background-image:linear-gradient(rgba(79,214,232,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(79,214,232,.16) 1px,transparent 1px);
+  background-size:56px 56px;transform:perspective(520px) rotateX(62deg);transform-origin:50% 100%;
+  -webkit-mask-image:linear-gradient(to top,#000 10%,transparent 85%);mask-image:linear-gradient(to top,#000 10%,transparent 85%);
+  animation:gridmove 14s linear infinite}
+@keyframes gridmove{to{background-position:0 56px,0 0}}
+@media(max-width:979px){.hero-bg{background:radial-gradient(70% 40% at 60% 88%,rgba(91,107,240,.26),transparent 70%)}}
+
+/* borda luminosa girando (cartão de exemplo e plano em destaque) */
+@property --ang{syntax:"<angle>";inherits:false;initial-value:0deg}
+.glow{isolation:isolate}
+.glow::after{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;pointer-events:none;
+  background:conic-gradient(from var(--ang),transparent 0 62%,var(--cy) 76%,var(--vi) 88%,transparent 100%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;
+  animation:spin 6s linear infinite}
+@keyframes spin{to{--ang:360deg}}
+
+/* entrada do título palavra por palavra */
+.hero h1>span{display:inline-block;animation:rise .9s cubic-bezier(.22,1,.36,1) both}
+.hero h1>span:nth-child(2){animation-delay:.12s}
+.hero h1>span:nth-child(3){animation-delay:.26s}
+.hero .lead,.hero-cta,.hero-note{animation:rise .9s cubic-bezier(.22,1,.36,1) .4s both}
+.ficha{animation:rise 1s cubic-bezier(.22,1,.36,1) .3s both}
+@keyframes rise{from{opacity:0;transform:translateY(26px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+
+/* revelar ao rolar (só com JS ativo) */
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.js .rv.in{opacity:1;transform:none}
+
+/* inclinação 3D suave do cartão */
+.tilt{transition:transform .5s cubic-bezier(.22,1,.36,1);transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg))}
+
+/* barra de progresso de leitura no topo */
+.progress{position:absolute;left:0;right:0;bottom:-1px;height:2px;transform-origin:0 50%;transform:scaleX(0);
+  background:linear-gradient(90deg,var(--cy),var(--bl),var(--vi))}
+@supports (animation-timeline:scroll()){.progress{animation:grow linear both;animation-timeline:scroll(root)}}
+@keyframes grow{to{transform:scaleX(1)}}
+
+@media (prefers-reduced-motion:reduce){
+  .hero-bg::before,.glow::after,.hero h1>span,.hero .lead,.hero-cta,.hero-note,.ficha{animation:none}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .tilt{transform:none}
+}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(135% 95% at 50% 0%,transparent 30%,rgba(10,13,28,.74) 74%,var(--bg) 100%)}
 .hero-grid{display:grid;gap:48px;align-items:center}
 @media(min-width:980px){.hero-grid{grid-template-columns:1.08fr .92fr;gap:56px}}
@@ -201,10 +257,11 @@ footer{border-top:1px solid var(--line);padding-block:48px 60px;font-size:15px;b
       <a class="btn btn-primary" href="https://wa.me/34678218084"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3 0-1.4.7-2.1 1-2.4.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.2.1.6-.1 1.1z"/></svg><span data-es="Escríbeme" data-pt="Me chama">Escríbeme</span></a>
     </div>
   </div>
+  <div class="progress" aria-hidden="true"></div>
 </header>
 
 <div class="hero">
-  <canvas id="mesh" aria-hidden="true"></canvas>
+  <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap">
     <div class="hero-grid">
       <div>
@@ -218,7 +275,7 @@ footer{border-top:1px solid var(--line);padding-block:48px 60px;font-size:15px;b
         <p class="hero-note"><span class="stars" style="gap:1px" aria-hidden="true"></span><span data-es="Bares, restaurantes, peluquerías y tiendas de Barcelona. En español y portugués." data-pt="Bares, restaurantes, cabeleireiros e lojas de Barcelona. Em espanhol e português.">Bares, restaurantes, peluquerías y tiendas de Barcelona. En español y portugués.</span></p>
       </div>
 
-      <div class="glass spot ficha">
+      <div class="glass spot ficha glow tilt" id="ficha">
         <span class="chip" data-es="Ejemplo" data-pt="Exemplo">Ejemplo</span>
         <div class="ficha-head">
           <div class="avatar"></div>
@@ -332,7 +389,7 @@ footer{border-top:1px solid var(--line);padding-block:48px 60px;font-size:15px;b
         </ul>
         <a class="btn btn-ghost" href="https://wa.me/34678218084" data-es="Empezar" data-pt="Começar">Empezar</a>
       </div>
-      <div class="glass spot plan featured">
+      <div class="glass spot plan featured glow">
         <span class="tag" data-es="Visibilidad + Redes · el más contratado" data-pt="Visibilidade + Redes · o mais contratado">Visibilidad + Redes · el más contratado</span>
         <div class="price">189 €<span data-es=" /mes" data-pt=" /mês"> /mes</span></div>
         <ul>
@@ -361,9 +418,9 @@ footer{border-top:1px solid var(--line);padding-block:48px 60px;font-size:15px;b
 <section style="padding-top:0">
   <div class="wrap">
     <div class="facts">
-      <div class="glass fact"><b class="grad-text">20+</b><span data-es="años trabajando en tecnología" data-pt="anos trabalhando com tecnologia">años trabajando en tecnología</span></div>
+      <div class="glass fact"><b class="grad-text" data-count="20" data-suffix="+">20+</b><span data-es="años trabajando en tecnología" data-pt="anos trabalhando com tecnologia">años trabajando en tecnología</span></div>
       <div class="glass fact"><b class="grad-text">ES · PT</b><span data-es="atención en los dos idiomas" data-pt="atendimento nos dois idiomas">atención en los dos idiomas</span></div>
-      <div class="glass fact"><b class="grad-text">24 h</b><span data-es="tiempo de respuesta" data-pt="tempo de resposta">tiempo de respuesta</span></div>
+      <div class="glass fact"><b class="grad-text" data-count="24" data-suffix=" h">24 h</b><span data-es="tiempo de respuesta" data-pt="tempo de resposta">tiempo de respuesta</span></div>
       <div class="glass fact"><b class="grad-text">0 €</b><span data-es="coste de la primera revisión" data-pt="custo da primeira análise">coste de la primera revisión</span></div>
     </div>
   </div>
@@ -446,43 +503,40 @@ footer{border-top:1px solid var(--line);padding-block:48px 60px;font-size:15px;b
   var STAR='<svg viewBox="0 0 24 24"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5 6.1 20.6l1.2-6.5L2.5 9.5l6.6-.9z"/></svg>';
   document.querySelectorAll('.stars').forEach(function(s){ s.innerHTML=STAR.repeat(5); });
 
-  var cv=document.getElementById('mesh'), ctx=cv&&cv.getContext('2d');
-  if(ctx){
-    var S=5, W=0, H=0, t=0, mx=.5, my=.4, tx=.5, ty=.4;
-    var blobs=[
-      {c:'#4FD6E8', r:.60, ax:.30, ay:.26, sx:.00031, sy:.00043, ph:0.0, mw:.22},
-      {c:'#5B6BF0', r:.72, ax:.26, ay:.22, sx:.00024, sy:.00036, ph:1.7, mw:.34},
-      {c:'#8B5CF6', r:.54, ax:.32, ay:.20, sx:.00037, sy:.00028, ph:3.1, mw:.18},
-      {c:'#2F2665', r:.66, ax:.24, ay:.28, sx:.00019, sy:.00047, ph:4.6, mw:.26}
-    ];
-    function size(){ var r=cv.getBoundingClientRect();
-      W=Math.max(1,Math.round(r.width/S)); H=Math.max(1,Math.round(r.height/S)); cv.width=W; cv.height=H; }
-    function draw(){
-      ctx.globalCompositeOperation='source-over';
-      ctx.fillStyle='#0A0D1C'; ctx.fillRect(0,0,W,H);
-      ctx.globalCompositeOperation='lighter';
-      mx+=(tx-mx)*.055; my+=(ty-my)*.055;
-      for(var i=0;i<blobs.length;i++){
-        var b=blobs[i];
-        var x=(.5+Math.cos(t*b.sx+b.ph)*b.ax+(mx-.5)*b.mw)*W;
-        var y=(.45+Math.sin(t*b.sy+b.ph)*b.ay+(my-.5)*b.mw)*H;
-        var rad=b.r*Math.max(W,H)*.52;
-        var g=ctx.createRadialGradient(x,y,0,x,y,rad);
-        g.addColorStop(0,b.c); g.addColorStop(1,'rgba(0,0,0,0)');
-        ctx.fillStyle=g; ctx.beginPath(); ctx.arc(x,y,rad,0,6.2832); ctx.fill();
-      }
-    }
-    function loop(ts){ t=ts||0; draw(); requestAnimationFrame(loop); }
-    size(); draw();
-    if(!reduce) requestAnimationFrame(loop);
-    window.addEventListener('resize', function(){ size(); draw(); });
-    var hero=document.querySelector('.hero');
-    hero.addEventListener('pointermove', function(e){
-      var r=hero.getBoundingClientRect();
-      tx=(e.clientX-r.left)/r.width; ty=(e.clientY-r.top)/r.height;
-      if(reduce) draw();
+  document.documentElement.classList.add('js');
+
+  // revelar elementos ao rolar
+  var rv=document.querySelectorAll('.sec-head,.svc,.work figure,.wrow,.plan,.fact,.faq,.final');
+  rv.forEach(function(el){
+    el.classList.add('rv');
+    var sib=Array.prototype.indexOf.call(el.parentNode.children, el);
+    el.style.transitionDelay=(Math.min(sib,4)*90)+'ms';
+  });
+  function countUp(el){
+    var n=+el.getAttribute('data-count'), suf=el.getAttribute('data-suffix')||'', t0=null;
+    if(reduce){ el.textContent=n+suf; return; }
+    function step(ts){ if(!t0) t0=ts; var k=Math.min(1,(ts-t0)/1200), e=1-Math.pow(1-k,3);
+      el.textContent=Math.round(n*e)+suf; if(k<1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(en){ if(!en.isIntersecting) return;
+        en.target.classList.add('in');
+        en.target.querySelectorAll('[data-count]').forEach(countUp);
+        io.unobserve(en.target); });
+    },{threshold:.15, rootMargin:'0px 0px -40px 0px'});
+    rv.forEach(function(el){ io.observe(el); });
+  } else { rv.forEach(function(el){ el.classList.add('in'); }); }
+
+  // inclinação 3D do cartão (só com mouse)
+  var fi=document.getElementById('ficha');
+  if(fi && !reduce && window.matchMedia('(pointer:fine)').matches){
+    fi.addEventListener('pointermove', function(e){
+      var r=fi.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      fi.style.setProperty('--ry',(x*10).toFixed(2)+'deg'); fi.style.setProperty('--rx',(-y*10).toFixed(2)+'deg');
     });
-    hero.addEventListener('pointerleave', function(){ tx=.5; ty=.4; if(reduce) draw(); });
+    fi.addEventListener('pointerleave', function(){ fi.style.setProperty('--ry','0deg'); fi.style.setProperty('--rx','0deg'); });
   }
 
   document.querySelectorAll('.spot').forEach(function(el){
